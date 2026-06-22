@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LibrarymanagementSystem.Application.Features.Books.Dtos
+{
+    public class BookFileDownloadDto
+    {
+        public string FileName { get; set; } = null!;
+        public string ContentType { get; set; } = null!; 
+        public byte[] Content { get; set; } = null!; 
+    }
+
+}
