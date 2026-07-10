@@ -476,128 +476,62 @@ https://localhost:xxxx/swagger
 
 ---
 
-# 📡 API Features
+# 📡 API Modules
 
-The API provides endpoints for:
+The API is organized into multiple feature-rich modules following Clean Architecture and CQRS principles.
 
-### Authentication
-
-- Register
-- Login
-- Refresh Token
-- Revoke Token
-
----
-
-### Books
-
-- Create Book
-- Update Book
-- Delete Book
-- Get Books
-- Search Books
-
----
-
-### Authors
-
-- CRUD Operations
+| Module | Description |
+|---------|-------------|
+| 🔐 Authentication | Secure user registration, login, JWT authentication, refresh tokens, and role-based authorization using ASP.NET Identity. |
+| 👤 Authors | Manage authors with CRUD operations, activation/deactivation, bulk actions, search, pagination, statistics, and retrieve books or categories by author. |
+| 📚 Books | Complete book management including CRUD operations, file upload/download, search, pagination, activation, borrowing, returning, and bulk operations. |
+| 📖 Book Copies | Manage physical book copies, track availability, restore deleted copies, search, pagination, statistics, and copy management for each book. |
+| 🏷 Categories | Create and manage categories, retrieve related books and authors, perform search, pagination, statistics, and bulk restore operations. |
+| 🏢 Branches | Manage library branches with activation, restoration, statistics, advanced search, pagination, and separate user/admin views. |
+| 📍 Locations | Manage shelf locations, monitor capacity, transfer books between locations, activate/deactivate locations, and generate statistics. |
+| 🏢 Publishers | Manage publishers, upload logos, retrieve publisher statistics, search, pagination, bulk creation, and book relationships. |
+| 📖 Loan Books | Track all borrowing activities including returned, overdue, damaged, and lost books with user-specific history and analytics. |
+| ⏳ Reservations | FIFO-based reservation system allowing users to reserve unavailable books with automatic promotion when copies become available. |
+| 💰 Fines | Automatically calculate overdue fines, manage payments, generate reports, track unpaid fines, and provide financial statistics. |
+| 💳 Fine Payments | Support partial and full fine payments, payment confirmations, payment summaries, revenue reports, and user payment history. |
+| ⭐ Reviews | Allow users to review and rate books, manage review moderation, restore deleted reviews, report inappropriate content, and analyze rating distribution. |
+| 📊 Reports & Analytics | Generate comprehensive reports and statistics for books, loans, branches, authors, publishers, locations, fines, and system activity. |
 
 ---
 
-### Categories
+## 🚀 Highlights
 
-- CRUD Operations
+- 📚 Complete Library Management Solution
 
----
+- 🔐 JWT Authentication & ASP.NET Identity
 
-### Publishers
+- 🏗 Clean Architecture
 
-- CRUD Operations
+- ⚡ CQRS using MediatR
 
----
+- 📧 Email Notifications
 
-### Branches
+- ⏰ Hangfire Background Jobs
 
-- CRUD Operations
+- 💰 Fine & Partial Payment System
 
----
+- 📖 FIFO Reservation Queue
 
-### Locations
+- ⭐ Book Reviews & Ratings
 
-- CRUD Operations
+- 📊 Advanced Analytics & Reporting
 
----
+- 📁 Book File Upload & Download
 
-### Book Copies
+- 🔎 Search & Pagination Across All Modules
 
-- Add Copy
-- Update Copy
-- Copy Availability
+- 👥 Role-Based Authorization
 
----
+- ♻ Soft Delete & Restore
 
-### Loans
+- 📈 Bulk Operations
 
-- Borrow Book
-- Return Book
-- Loan History
-
----
-
-### Reservations
-
-- Reserve Book
-- Cancel Reservation
-- Reservation Queue
-- Automatic FIFO Processing
-
----
-
-### Fines
-
-- Calculate Fine
-- Fine Details
-- Outstanding Balance
-
----
-
-### Payments
-
-- Partial Payment
-- Full Payment
-- Payment History
-
----
-
-### Feedback
-
-- Add Rating
-- Add Review
-- Update Review
-
----
-
-### Reports
-
-- Revenue Report
-- Fine Summary
-- Borrowing Statistics
-- Most Borrowed Books
-
----
-
-# 📸 API Preview
-
-<p align="center">
-
-<img src="images/swagger-home.png" width="900"/>
-
-</p>
-
-> Replace the image above with your Swagger screenshot.
-
----
+- 🧾 Revenue & Financial Reports
 
 # 📈 Future Improvements
 
